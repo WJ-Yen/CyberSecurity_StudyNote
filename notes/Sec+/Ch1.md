@@ -389,8 +389,84 @@
 - Replace data with placeholder
 - Common with credit card Processing
     - Use one time tokens
-    - No encryption
+    - No encryption needed
 #### Data masking
 - e.g. ********24, the asterisk is masking
 
+### Hashes
+- Data -> short string or text
+- One-way
+- Integrity, Authentication(digital signature)...
+#### Collision
+- Different input should never create the same hash
+- MD5 problem
+#### Practical usage
+- Verify download files
+- Password storage
+#### Adding salt
+- Random data added to password when hashing
+#### Digital signatures
+- Prove the source and not changed or fake
+- Use private key encryption
 
+### Blockchain
+- Distributed ledger
+- Everyone maintain the network
+#### Process
+1. Transaction requested
+2. Sent to every node in the network to be verified
+3. Adding new block of data containing verified transaction
+4. Hash created and added to new block
+5. Update all nodes in the network, transaction complete
+- If any blocks be altered, the hash will not be the same, and the rest of network reject
+
+### Certificate
+- Public key certificate
+- Web of trust: trust chain
+
+#### Format
+- X.509: standard format
+    - Serial number
+    - Signature Algorithm
+    - Public key
+    - ...
+
+#### Root of trust
+- How to build trust?
+- 3rd party, HSA, Secure enclave, CA...
+
+#### 3rd party CA
+- Built in to browser
+- Purchase web site certificate
+- Additional verification information my be request by CA
+
+#### Certificate signing requests (CSR)
+1. Create key pair
+2. Send public key to CA (CSR)
+3. CA validates request
+    - Confirms DNS emails and website ownership
+4. CA signs the certificate and return
+
+#### Private certificate authorities
+- Build it in house
+- Large organization needed
+- Same process as external CA
+
+#### Wildcard ceritficates
+- Subject Alternatice Name (SAN)
+    - Extension to X.509 
+    - Support different domains in a certificate
+- Wildcard domain: Certificate based on name of the server
+
+#### Key revoaction
+- Certificate Revocation List (CRL)
+- CVE-2014-0160: Heartbleed. OpenSSL patched and many web server certificate replaced, Older certificate moved to CRL
+
+#### OCSP stapling
+- Online Certificate Status Protocol
+- Certificate holder verify their own status
+- OCSP status is "stapled" into the SSL/TLS handshake
+
+#### Getting revocation to the browser
+- Messages sent to an OCSP via HTTP, more efficient than CRL
+- Not all browser support OCSP
