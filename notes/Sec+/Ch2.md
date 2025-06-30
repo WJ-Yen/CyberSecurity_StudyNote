@@ -107,8 +107,88 @@
 - Counterfeit networking equipment
 - Install backdoors, substandard performance and availability
 
-## 2.3 Types of Vulnerabilities
+### Phishing
+- Social engineering with touch of spoofing
+- Check URL
+- People trust email sources
+- Finacial fruad
+- Typosquatting, pretexting
+#### Vishing
+- Voice phishing
+#### Smishing
+- SMS phishing
 
+### Impersonation
+- Pretend to be someone
+- Extracting information
+- Psycological techniques
+#### Identity fraud
+- Credit card fraud
+- Bank fraud
+- Loan fraud
+- Government benefit
+#### Protect against impersonation
+1. Never volunteer information
+2. Don't disclose personal details
+3. Verify before giving info
+
+### Watering Hole Attack
+- "Attacker poisoned the water hole waiting for you to visit"
+- Need research: third-party sites etc.
+#### Defense-in-depth
+- Layered defense
+- Firewalls, IPS: Stop network traffic
+- Anti-virus, Anti-malware: Block malicious software
+
+### Misinformation
+- Create confusion and division
+- Political and social issues
+- Through social media
+
+#### Process of misinformation
+1. Fake users
+2. Create content
+3. Post on social media
+4. Amplify message
+5. Real users share
+6. Mass media picks up the story
+
+#### Brand Impersonation
+- Pretend to be well-known brand: Google, Facebook, etc.
+
+### Memory Injection
+#### Finding malware
+- Malware runs in memory
+- DLLs, Threads, Buffers...
+#### Memory injection
+- Add code to memory of an existing process
+- Get access to the data in the process
+#### DLL injection
+- Inject a path to a malicious DLL
+- Get process reference the DLL
+
+### Buffer Overflow
+- Overwriting a buffer of memory
+- Not simple exploit
+- Useful buffer overflow is repeatable
+
+### Race Condition
+- Process happen at the same time
+- Time-of-check to time-of-use attack (TOCTOU)
+    - Use before you check
+
+### Malicious Updates
+- Some update is not secure
+- Best practices
+    - Always backup
+    - Install from trusted sources
+- Confirm the source
+- Automatic updates
+    - Relatively trustworthy
+    - Supply chain attack: attack developer first
+
+## 2.3 Types of Vulnerabilities
+### OS Vulnerabilities
 
 
 ## 2.4 Indicators of Malicious Activity
