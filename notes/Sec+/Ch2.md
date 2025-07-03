@@ -189,10 +189,219 @@
 
 ## 2.3 Types of Vulnerabilities
 ### OS Vulnerabilities
+- Foundational computing platform
+- Complex
+- Some not found vulnerabilities
+#### OS update
+- Windows: Patch Tuesday, 2nd Tuesday each month
+#### Best practices
+- Always update
+- May require testing, reboot
+- Fallback plan!
 
+### SQL Injection
+- Structured Query Language
+- SQLi: SQL injection
+- Often in a web server
+- "sth ' or "1'='1"
+
+### Cross-site scripting
+- XSS
+- A malicious script that execute in browser secretly to send data to attacker
+#### Non-persistent/Reflected XSS attack
+- Add script after website input bar
+#### Persistent/Store XSS attack
+- Post a meesage to a social network
+- Everyone gets the payload, no specific target
+- Can spread quickly
+#### Protecting against XSS
+- Don't click untrust links 
+- Consider disabling Javascript
+- Keep browser update
+- Validate input
+### Hardware Vulnerabilities
+- Many do not have operating system
+- IoT devices
+#### Firmware
+- Software inside hardware
+- Vendors are the only ones who can fix hardware
+#### End-of-life (EOL)
+- Manufacturer stop selling product
+- End of service life (EOSL)
+    - Stop selling and supporting 
+- EOSL is significant concern
+#### Legacy platform
+- Some devices remain installed for a long time
+- Require additional security protection
+    - Firewall rules, IPS signatures...
+### Virtualization Security
+- Appear anywhere
+- Resources vary
+- Complex-er than normal machine
+#### VM escape protection
+- Break out of the  VM and interact with the host
+- Get control of the other VMs or the host
+#### Resource reuse
+- Hypervisor manages resources, RAM, storage, CPU...
+- Sometime VMs get the datas from other VMs 
+- Hypervisor should fix it
+### Cloud-specific Vulnerabilities
+- Sensitive data
+- Not enough protection
+#### Attack the service
+- Denial of Service (DoS)
+- Authentication bypass
+    - Allow attacker get data
+- Dirctory traversal
+- Remote cod execution
+#### Attack the application
+- Web application attacks
+- XSS
+- Out of bounds write
+- SQL injection
+### Supply Chain Vulnerabilities
+- Attacks infect some step along the way
+#### Service providers
+- Consider ongoing security audits
+#### Hardware providers
+- Use small supplier base
+- Strict control over policies and procedures
+#### Cisco?
+- Switches and routers manufacturer
+- Fake Cisco product concern
+#### Software providers
+- Installation should be signed
+- Updates and patch
+- Open sources
+### Misconfiguration Vulnerabilities
+- Open permission
+#### Unsecured admin accounts
+- Root, superuser
+- Easy-to-hack passwords
+#### Insecure protocols
+- Some protocols aren't encrypted
+- Packet capture
+#### Default setting
+- Mirai botnet: Takes adveantage of default setting
+#### Ports
+- Manage traffic flows
+- Access the machine
+### Mobile Device Security
+- Small, in motion, sensitive data, constantly connected to net
+#### Jailbreaking/rooting
+- Gaining access
+- Install custom firmware
+#### Sideloading
+- Malicious apps
+- Manage installation sources: App store...
+### Zero Day Vulnerabilities
+- Many vulnerabilities not found yet
+- Attack without patch or method of mitigation
+- Common Vulnerabilities and Exposure (CVE)
 
 ## 2.4 Indicators of Malicious Activity
+### Malware
+- Malicious software
+- Gather information
+- Show advertising
+- Viruses and worms
+#### Types and methods
+- Viruses, Worms, Ransomware, Trojan Horse, Rootkit...
+- Control the system
+#### Get malware
+- Worms take advantage of a vulnerability
+- Install remote access backdoors
+- Computer must run some program to get malware
+- Keep updated OS
+#### Why malware
+- Data is valuable
+- Personal data
+- Organization data
+#### Ransomware
+- Encrypted all the datas
+- OS remains available
+#### Protecting against Ransomware
+- Backup
+- Keep everything up to date
+- Anti-virus
+### Viruses
+- Virus: Malware that can reproduce itself through file systems or the network
+- May or may not cause problems
+- Thousands new viruses every week
+#### Virus Types
+- Program Viruses: Part of the application
+- Boot sector viruses: Activate when boot
+- Script viruses: OS and browser-based
+- Macro viruses: Microsoft Office
+#### Fileless viruses
+- Stealth attack
+- Inside memory
+### Worms
+- Malware that self-replicates
+- Uses the network ad transmission medium, spreads quickly
+- Can take over many systems
+- Firewalls and IDS/IPS can mitigate many worms
+    - Doesn't help once the worm is inside
+- Wannacry worm
+### Spyware 
+- Malware that spies on you
+- Browser monitoring
+- Keyloggers
+#### Protecting
+- Maintain Anti-virus
+- Know what you're installing
+- Backup
+- Run some scans
 
+### Bloatware
+- New computer or phone includes applications you didn't expect
+- Use storage space
+- Manaually Remove
+- Some may not have uninstaller
+### Other types of Malware
+#### Keyloggers
+- Keyloggers: Catch the keystrokes inputs
+- Passwords, email messages...
+- Clipboard logging, screen logging...
+#### Logic bomb
+- Waits for a predefined event
+- Time bomb, User event
+- Difficult to identify and recover
+- Remove OS or boot device or something
+- Check the changes, monitor processes, check permission
+#### Rootkits
+- Modifies core system files
+- Can be invisible to OS, Anti-virus...
+- Anti-malware scans, Secure boot with UEFI, rootkit remover
+### Physical attacks
+- Old-school security
+- Physical access to full access
+#### Brute force
+- Break windows, doors
+#### RFID cloning
+- Access badges
+- RFID duplicators
+- Duplicator takes seconds
+- Use MFA
+#### Environmental attacks
+- To shut down everything
+- Attack power
+- HVAC (Heating, Ventilation, Air Conditioning)
+- Humidity controls
+- Fire suppression
+### Denial of Service
+- Force a service to fail, unavailable
+#### Unintentional DoSing
+- Network DoS: Layer 2 loop without STP
+- Bandwidth DoS: Downloading large files
+#### Distributed DoS (DDoS)
+- Launch many computers to bring down a service
+- Botnets
+- Asymmetric threat: Attacker may have fewer resources than victim
+#### DDoS reflection and amplification
+- Turn small attack into big attack
+- Uses protocols with little authentication or checks
+    - NTP, DNS, ICMP...
 
 
 ## 2.5 Mitigation Techniques
